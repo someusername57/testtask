@@ -7,6 +7,7 @@ require '../classes/KanbanBoard/Github.php';
 require '../classes/Utilities.php';
 require '../classes/KanbanBoard/Authentication.php';
 
+Utilities::init();
 $repositories = explode('|', Utilities::env('GH_REPOSITORIES'));
 $authentication = new \KanbanBoard\Login();
 $token = $authentication->login();
