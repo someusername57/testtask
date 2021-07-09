@@ -7,7 +7,7 @@ class Utilities
         $config = fopen(__DIR__."/../config", "r");
         if ($config) {
             while (($envVar = fgets($config, 4096)) !== false) {
-                putenv($envVar);
+                putenv(trim($envVar));
             }
         }
     }
